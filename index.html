@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get Current URL</title>
+</head>
+<body onload="getURL();">
+  <p id="demo"></p>
+</body>
+  <script>
+    function getURL() {
+        var port = window.location.port;
+        if(port == "8081") {
+                port = 8081;
+        }
+        else {
+                port = 8080;
+        }
+        document.getElementById("demo").innerHTML = "Request is being served by port: " + port;
+    }
+   </script>
+</html>
